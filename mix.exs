@@ -68,7 +68,6 @@ defmodule Ret.Mixfile do
       {:secure_random, "~> 0.5"},
       {:bamboo, "~> 2.5.0"},
       {:bamboo_phoenix, "~> 1.0"},
-      {:bamboo_smtp, "~> 1.7"},
       {:guardian, "~> 2.3.1"},
       {:guardian_phoenix, "~> 2.0"},
       {:canary, "~> 1.1.1"},
@@ -91,7 +90,9 @@ defmodule Ret.Mixfile do
       {:ex_json_schema, "~> 0.7.3"},
       {:observer_cli, "~> 1.5"},
       {:stream_data, "~> 0.5",
-       github: "whatyouhide/stream_data", ref: "c7ef8ef", only: [:dev, :test]}
+       github: "whatyouhide/stream_data", ref: "c7ef8ef", only: [:dev, :test]},
+      {:castore, "~> 1.0"},
+      {:bamboo_mua, "~> 0.2.0"}
     ]
   end
 
