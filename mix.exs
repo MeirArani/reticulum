@@ -39,7 +39,7 @@ defmodule Ret.Mixfile do
       {:phoenix_pubsub, "~> 2.1"},
       {:phoenix_ecto, "~> 4.6.6"},
       {:plug, "~> 1.19"},
-      {:ecto, "~> 3.12.3 "},
+      {:ecto, "~> 3.13.5 "},
       {:ecto_sql, "~> 3.13.3"},
       {:absinthe, "~> 1.7.10"},
       {:dataloader, "~> 2.0.1"},
