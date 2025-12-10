@@ -1,9 +1,10 @@
 # syntax=docker/dockerfile:1
 ARG ALPINE_VERSION=3.21.3
-ARG ELIXIR_VERSION=1.16.3
+ARG ELIXIR_VERSION=1.17.3
 ARG ERLANG_VERSION=25.3.2.20
 
 FROM hexpm/elixir:${ELIXIR_VERSION}-erlang-${ERLANG_VERSION}-alpine-${ALPINE_VERSION} AS base
+RUN 
 RUN mix do local.hex --force, local.rebar --force
 
 FROM base AS dev
@@ -21,6 +22,7 @@ CMD sh -c "PERMS_KEY=\"$(cat /etc/perms.pem)\" mix phx.server"
 FROM base AS builder
 RUN apk add --no-cache nodejs yarn git build-base
 COPY . .
+RUN echo "TESTINGasdfasdkfasdjfksadjfksadflkadfklasdklfjklsadjfklasdjfklajsdklfjkalsdfjkldsajflkjasdklfjaklsdfjklsadjfklsjdklfjaksldf"
 RUN mix deps.get
 RUN MIX_ENV=turkey mix release
 
